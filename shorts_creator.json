@@ -1,0 +1,51 @@
+{
+    "name": "Shorts Creator",
+    "nodes": [
+        {
+            "parameters": {
+                "rule": {
+                    "interval": [
+                        {
+                            "field": "hours",
+                            "hoursInterval": 4
+                        }
+                    ]
+                }
+            },
+            "id": "7f0e0f0b-4d5a-4e5a-8b5a-5e5a5e5a5e5a",
+            "name": "Schedule Trigger",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "command": "python3 /home/node/scripts/engine.py"
+            },
+            "id": "8f0f0f0c-5d5b-5e5b-9b5b-6e5a5e5a5e5b",
+            "name": "Execute Engine",
+            "type": "n8n-nodes-base.executeCommand",
+            "typeVersion": 1,
+            "position": [
+                450,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Schedule Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Execute Engine",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

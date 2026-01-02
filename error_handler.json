@@ -1,0 +1,51 @@
+{
+    "name": "Error Handler & Heartbeat",
+    "nodes": [
+        {
+            "parameters": {
+                "rule": {
+                    "interval": [
+                        {
+                            "field": "minutes",
+                            "minutesInterval": 30
+                        }
+                    ]
+                }
+            },
+            "id": "9f0f0f0d-6d5c-6e5c-0b5c-7e5a5e5a5e5c",
+            "name": "Heartbeat Trigger",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "command": "python3 /home/node/scripts/monitor.py"
+            },
+            "id": "af0f0f0e-7d5d-7e5d-1b5d-8e5a5e5a5e5d",
+            "name": "Execute Monitor",
+            "type": "n8n-nodes-base.executeCommand",
+            "typeVersion": 1,
+            "position": [
+                450,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Heartbeat Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Execute Monitor",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}
