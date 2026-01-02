@@ -2,9 +2,9 @@
 
 ## 1. Prerequisites
 - Docker & Docker Compose installed on Oracle VPS.
-- Supabase Project with:
-  - `videos` table (`id` (uuid), `url` (text), `status` (text)).
-  - `health_logs` table (`timestamp` (timestamptz), `status` (text), `disk_usage` (float), `ram_usage` (float)).
+- Supabase Project (`nvxnhphlzsqwlivjkfmg`):
+  - URL: `https://nvxnhphlzsqwlivjkfmg.supabase.co`
+  - Run the SQL in [schema.sql](file:///c:/Users/Lusa/.gemini/antigravity/playground/electric-meteoroid/schema.sql) in your Supabase SQL Editor.
 - Hugging Face API Token.
 
 ## 2. Initial Setup
@@ -13,7 +13,7 @@
    ```env
    N8N_HOST=your-vps-ip
    HF_TOKEN=your-huggingface-token
-   SUPABASE_URL=your-supabase-url
+   SUPABASE_URL=https://nvxnhphlzsqwlivjkfmg.supabase.co
    SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
    ```
 4. Prepare your Google Sheet:
