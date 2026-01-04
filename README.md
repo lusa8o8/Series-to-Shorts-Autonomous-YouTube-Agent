@@ -11,10 +11,18 @@
 1. Clone this repository to your VPS.
 2. Create a `.env` file with the following:
    ```env
-   N8N_HOST=your-vps-ip
+   N8N_HOST=your-space-name.hf.space
    HF_TOKEN=your-huggingface-token
    SUPABASE_URL=https://nvxnhphlzsqwlivjkfmg.supabase.co
    SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
+
+   # N8N Persistence (Supabase Postgres)
+   DB_TYPE=postgresdb
+   DB_POSTGRESDB_HOST=aws-0-eu-central-1.pooler.supabase.com
+   DB_POSTGRESDB_PORT=5432
+   DB_POSTGRESDB_DATABASE=postgres
+   DB_POSTGRESDB_USER=postgres.nvxnhphlzsqwlivjkfmg
+   DB_POSTGRESDB_PASSWORD=gGCX&5_g@M3SYX8
    ```
 4. Prepare your Google Sheet:
    - Tab named `Videos` with headers: `Video_ID`, `Title`, `Status`.
